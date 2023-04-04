@@ -30,9 +30,14 @@ def pass_gen(length):
 
     return password
 
-print(Fore.LIGHTBLUE_EX + "How long do you want the password to be?")
-length2 = int(input())
+while True:
+    try:
+        print(Fore.LIGHTBLUE_EX + "How long do you want the password to be?")
+        length2 = input()
+        length2 = int(length2)
+        break
+    except ValueError:
+        pass
 
 print(pass_gen(length2))
-
 input()
