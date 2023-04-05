@@ -24,7 +24,7 @@ def pass_gen(length):
         print(Fore.LIGHTBLUE_EX + "Do you want to copy the password to your clipboard? (y/n)")
         copy = input()
 
-        while (not copy.isalpha()): # This checks if the input contains only alphabeticals characters and not numbers.
+        while (not copy.isalpha()): # This checks if the input only contains alphabeticals characters.
             print(Fore.LIGHTBLUE_EX + "Do you want to copy the password to your clipboard? (y/n)")
             copy = input()
 
