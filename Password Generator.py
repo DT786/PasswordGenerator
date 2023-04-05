@@ -20,20 +20,20 @@ def pass_gen(length):
 
     copy = ''
 
-    if (numofpasswords == 1):        
+    if numofpasswords == 1:        
         print(Fore.LIGHTBLUE_EX + "Do you want to copy the password to your clipboard? (y/n)")
         copy = input()
 
-        while (not copy.isalpha()): # This checks if the input only contains alphabeticals characters.
+        while not copy.isalpha(): # This checks if the input only contains alphabeticals characters.
             print(Fore.LIGHTBLUE_EX + "Do you want to copy the password to your clipboard? (y/n)")
             copy = input()
 
     for i in range(numofpasswords):
         for i in range(length):
             password += random.choice(chars)
-            if (len(str(password)) == length):
+            if len(str(password)) == length:
                 print(password)
-                if (copy == "y"):
+                if copy == "y":
                     pyperclip.copy(password)
                 password = ''
 
