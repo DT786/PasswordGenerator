@@ -21,11 +21,11 @@ def pass_gen(length):
     copy = ''
 
     if numofpasswords == 1:        
-        print(Fore.LIGHTBLUE_EX + "Do you want to copy the password to your clipboard? (y/n)")
+        print("Do you want to copy the password to your clipboard? (y/n)")
         copy = input()
 
         while not copy.isalpha(): # This checks if the input only contains alphabetical characters.
-            print(Fore.LIGHTBLUE_EX + "Do you want to copy the password to your clipboard? (y/n)")
+            print("Do you want to copy the password to your clipboard? (y/n)")
             copy = input()
 
     for i in range(numofpasswords):
