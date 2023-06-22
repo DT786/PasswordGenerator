@@ -1,11 +1,36 @@
 #Modules
-import random
-import string
-import pyperclip
-import colorama
-from colorama import Fore, init
-colorama.init(convert = True)
+import os
 
+try:
+    import random
+except:
+    os.system('pip install random')
+    import random
+    
+try:
+    import string
+except:
+    os.system('pip install string')
+    import string
+
+try:
+    import pyperclip
+except:
+    os.system('pip install pyperclip')
+    import pyperclip
+    
+try:
+    import colorama
+    from colorama import Fore, init
+    colorama.init(convert = True)
+except:
+    os.system('pip install colorama')
+    import colorama
+    from colorama import Fore, init
+    colorama.init(convert = True)
+
+os.system('cls')
+os.system('title Password Generator')
 
 def pass_gen(length):
     password = ''
